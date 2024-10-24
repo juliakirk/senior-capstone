@@ -1,0 +1,101 @@
+City,State,StateCode,CensusCode
+Anchorage,Alaska,AK,02305
+Huntsville,Alabama,AL,40780
+Birmingham,Alabama,AL,07786
+Little Rock,Arkansas,AR,50392
+Phoenix,Arizona,AZ,69184
+Tucson,Arizona,AZ,88732
+Sacramento,California,CA,77068
+San Diego,California,CA,78661
+San Francisco,California,CA,78904
+San Jose,California,CA,79039
+Los Angeles,California,CA,51445
+Boulder,Colorado,CO,09298
+Colorado Springs,Colorado,CO,18856
+Denver,Colorado,CO,23527
+Fort Collins,Colorado,CO,30628
+New Haven,Connecticut,CT,62407
+Hartford,Connecticut,CT,37243
+Washington,District of Columbia,DC,92242
+Dover,Delaware,DE,24580
+Gainesville,Florida,FL,32167
+Jacksonville,Florida,FL,42346
+Miami,Florida,FL,56602
+Orlando,Florida,FL,65863
+Tallahassee,Florida,FL,86464
+Tampa,Florida,FL,86599
+West Palm Beach,Florida,FL,22612
+Athens,Georgia,GA,03763
+Atlanta,Georgia,GA,03817
+Columbus,Georgia,GA,19099
+Savannah,Georgia,GA,79768
+Honolulu,Hawaii,HI,39889
+Des Moines,Iowa,IA,23743
+Boise,Idaho,ID,08785
+Chicago,Illinois,IL,16264
+Indianapolis,Indiana,IN,41212
+South Bend,Indiana,IN,83116
+Lawrence,Kansas,KS,48232
+Wichita,Kansas,KS,95077
+Louisville,Kentucky,KY,51755
+Lafayette,Louisiana,LA,46045
+New Orleans,Louisiana,LA,62677
+Boston,Massachusetts,MA,09271
+Baltimore,Maryland,MD,04843
+Portland,Maine,ME,71263
+Ann Arbor,Michigan,MI,02602
+Grand Rapids,Michigan,MI,34300
+Lansing,Michigan,MI,47719
+Detroit,Michigan,MI,23824
+Minneapolis,Minnesota,MN,57628
+Rochester,Minnesota,MN,75637
+Kansas City,Missouri,MO,43912
+St. Louis,Missouri,MO,77770
+Jackson,Mississippi,MS,42211
+Bozeman,Montana,MT,09514
+Charlotte,North Carolina,NC,15670
+Durham,North Carolina,NC,25228
+Fayetteville,North Carolina,NC,29440
+Greensboro,North Carolina,NC,35164
+Raleigh,North Carolina,NC,73261
+Fargo,North Dakota,ND,29089
+Lincoln,Nebraska,NE,49933
+Omaha,Nebraska,NE,65269
+Manchester,New Hampshire ,NH,53740
+Atlantic City,New Jersey ,NJ,03904
+Albuquerque,New Mexico,NM,01171
+Reno,Nevada,NV,74179
+Las Vegas,Nevada,NV,47995
+Buffalo,New York,NY,11350
+New York City,New York,NY,63217
+Cincinnati,Ohio,OH,16885
+Columbus,Ohio,OH,19234
+Oklahoma City,Oklahoma,OK,65080
+Tusla,Oklahoma,OK,88948
+Portland,Oregon,OR,71317
+Eugene,Oregon,OR,28117
+Pittsburgh,Pennsylvania,PA,69697
+Philadelphia,Pennsylvania,PA,69076
+Providence,Rhode Island,RI,72505
+Charleston,South Carolina,SC,15508
+Columbia,South Carolina,SC,18964
+Sioux Falls,South Dakota,SD,82252
+Chattanooga,Tennessee,TN,15832
+Memphis,Tennessee,TN,56116
+Knoxville,Tennessee,TN,45640
+Nashville,Tennessee,TN,61273
+Austin,Texas,TX,04384
+Dallas,Texas,TX,22042
+Houston,Texas,TX,40429
+San Antonio,Texas,TX,78580
+Provo,Utah,UT,72559
+Salt Lake City,Utah,UT,78499
+Richmond,Virginia,VA,74746
+Virginia Beach,Virginia,VA,90892
+Burlington,Vermont,VT,11755
+Seattle,Washington,WA,80389
+Spokane,Washington,WA,83764
+Madison,Wisconsin,WI,53200
+Milwaukee,Wisconsin,WI,57466
+Charleston,West Virginia ,WV,15481
+Cheyenne,Wyoming,WY,16237
