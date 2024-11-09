@@ -1,0 +1,100 @@
+Albuquerque, New Mexico
+Anchorage, Alaska
+Ann Arbor, Michigan
+Athens, Georgia
+Atlanta, Georgia
+Atlantic City, New Jersey
+Austin, Texas
+Baltimore, Maryland
+Birmingham, Alabama
+Boise, Idaho
+Boston, Massachusetts
+Boulder, Colorado
+Bozeman, Montana
+Buffalo, New York
+Burlington, Vermont
+Charleston, South Carolina
+Charleston, West Virginia
+Charlotte, North Carolina
+Chattanooga, Tennessee
+Cheyenne, Wyoming
+Chicago, Illinois
+Cincinnati, Ohio
+Colorado Springs, Colorado
+Columbia, South Carolina
+Columbus, Georgia
+Columbus, Ohio
+Dallas, Texas
+Denver, Colorado
+Des Moines, Iowa
+Detroit, Michigan
+Dover, Delaware
+Durham, North Carolina
+Eugene, Oregon
+Fargo, North Dakota
+Fayetteville, North Carolina
+Fort Collins, Colorado
+Gainesville, Florida
+Grand Rapids, Michigan
+Greensboro, North Carolina
+Hartford, Connecticut
+Honolulu, Hawaii
+Houston, Texas
+Huntsville, Alabama
+Indianapolis, Indiana
+Jackson, Mississippi
+Jacksonville, Florida
+Kansas City, Missouri
+Knoxville, Tennessee
+Lafayette, Louisiana
+Lansing, Michigan
+Las Vegas, Nevada
+Lawrence, Kansas
+Lincoln, Nebraska
+Little Rock, Arkansas
+Los Angeles, California
+Louisville, Kentucky
+Madison, Wisconsin
+Manchester, New Hampshire
+Memphis, Tennessee
+Miami, Florida
+Milwaukee, Wisconsin
+Minneapolis, Minnesota
+Nashville, Tennessee
+New Haven, Connecticut
+New Orleans, Louisiana
+New York City, New York
+Oklahoma City, Oklahoma
+Omaha, Nebraska
+Orlando, Florida
+Philadelphia, Pennsylvania
+Phoenix, Arizona
+Pittsburgh, Pennsylvania
+Portland, Maine
+Portland, Oregon
+Providence, Rhode Island
+Provo, Utah
+Raleigh, North Carolina
+Reno, Nevada
+Richmond, Virginia
+Rochester, Minnesota
+Sacramento, California
+Salt Lake City, Utah
+San Antonio, Texas
+San Diego, California
+San Francisco, California
+San Jose, California
+Savannah, Georgia
+Seattle, Washington
+Sioux Falls, South Dakota
+South Bend, Indiana
+Spokane, Washington
+St. Louis, Missouri
+Tallahassee, Florida
+Tampa, Florida
+Tucson, Arizona
+Tusla, Oklahoma
+Virginia Beach, Virginia
+Washington, District of Columbia
+West Palm Beach, Florida
+Wichita, Kansas
