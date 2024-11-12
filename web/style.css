@@ -1,10 +1,114 @@
-html{   
-    background-color: ffffff;
+body {
     color: #5A6174;
     font-family: "inter-variable", sans-serif;
-font-variation-settings: "slnt" 0, "wght" 400;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color:  rgba(253, 213, 141, 0.76);
+}
+
+/* Header (navbar) styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space out logo + text and Log In */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Header background */
+    border-bottom: 1px solid #eaeaea;
+    margin: 0; /* Removes default margin from the <h1> */
+    color: #5A6174;
+
+}
+.header h1{
+    font-family: Inter;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+.headerlogo {
+    width: 2.4375rem; /* Adjust size as necessary */
+    height: auto;
+}
+
+.login {
+    color: #5A6174;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section {
+    background-color: #ffe4b5; /* Light yellow color */
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #3e3e3e;
+}
+
+p {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    background-color: #d1a8d1;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #b387b3;
+}
+
+.image-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ffe4b5 50%, white 50%);
+}
+
+.image-section img {
+    width: 400px;
+    height: auto;
+}
+
+
