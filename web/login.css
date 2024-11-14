@@ -1,0 +1,84 @@
+body, html {
+    height: 100%; /* Ensure the body takes the full screen */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #5A6174;
+    font-family: "inter-variable", sans-serif;
+}
+
+/* Header (navbar) styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space out logo + text and Log In */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Header background */
+    border-bottom: 1px solid #eaeaea;
+    color: #5A6174;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none; 
+    color: #5A6174;
+    font-family: "inter-variable", sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+.headerlogo {
+    width: 2.4375rem; /* Adjust size as necessary */
+    height: auto;
+}
+
+.login {
+    color: #5A6174;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+.loginDesign {
+    background-color: rgb(215, 165, 211, 0.95); 
+    width: 50%; /* 50% width */
+    padding: 50px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; /* Ensures elements are stacked vertically */
+    justify-content: center; /* Centers text content vertically */
+    flex-grow: 1; /* Ensures it takes up the available height */
+}
+
+.loginInfo{
+    width: 50%; /* Takes up half the screen */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    background-color: rgb(245, 230, 220, .68);
+    flex-grow: 1; /* Ensures it takes up the available height */
+}
+.container {
+    display: flex;
+    height: 100vh; /* Full screen height */
+    justify-content: center; /* Centers items horizontally */
+    align-items: stretch; /* Ensures both sections fill the same height */
+}
+
+.main{
+    color: #FFF;
+    font-family: "inter-variable", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+

@@ -1,11 +1,18 @@
-body {
-    color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+/* General body styling */
+body, html {
+    height: 100%; /* Ensure the body takes the full screen */
     margin: 0;
     padding: 0;
-    background-color:  rgba(253, 213, 141, 0.76);
+    background-color: #ffffff;
+    color: #5A6174;
+    font-family: "inter-variable", sans-serif;
 }
-
+h1{
+    font-family: "inter-variable", sans-serif;
+    font-size: 40px;
+    font-family: "inter-variable",sans-serif;
+    font-variation-settings: 'wght' 400, 'slnt' 0;
+}
 /* Header (navbar) styling */
 .header {
     display: flex;
@@ -14,16 +21,15 @@ body {
     padding: 20px;
     background-color: #ffffff; /* Header background */
     border-bottom: 1px solid #eaeaea;
-    margin: 0; /* Removes default margin from the <h1> */
     color: #5A6174;
-
 }
-.header h1{
-    font-family: Inter;
+
+.title {
     font-size: 1rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    text-decoration: none; 
+    color: #5A6174;
+    font-family: "inter-variable", sans-serif;
 }
 
 .logo {
@@ -47,68 +53,111 @@ body {
     text-decoration: underline;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Container for the text and image sections */
 .container {
     display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    height: 100vh; /* Full screen height */
+    justify-content: center; /* Centers items horizontally */
+    align-items: stretch; /* Ensures both sections fill the same height */
 }
 
+/* Text section styling */
 .text-section {
     background-color: #ffe4b5; /* Light yellow color */
-    width: 50%;
+    width: 55%; /* 50% width */
     padding: 50px;
     text-align: center;
+    display: flex; 
+    flex-direction: column; /* Ensures elements are stacked vertically */
+    justify-content: center; /* Centers text content vertically */
+    flex-grow: 1; /* Ensures it takes up the available height */
 }
 
-.logo img {
-    width: 50px;
-    height: 50px;
+/* Image section styling */
+.image-section {
+    width: 45%; /* Takes up half the screen */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    background: conic-gradient(
+        from 180deg at 50% 50%, 
+        rgba(245, 230, 220, 0.22) 70deg, 
+        rgba(143, 209, 205, 0.20) 140deg, 
+        rgba(215, 165, 211, 0.26) 220deg, 
+        rgba(247, 139, 69, 0.34) 310deg,
+        rgba(245, 230, 220, 0.22) 360deg
+    );
+    flex-grow: 1; /* Ensures it takes up the available height */
 }
 
-h1 {
-    font-size: 36px;
-    color: #3e3e3e;
+/* Image inside the image section */
+.image-section img {
+    width: 400px;
+    height: auto;
 }
 
-p {
-    font-size: 18px;
-    color: #4a4a4a;
-    margin-bottom: 20px;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack text and image vertically */
+    }
+
+    .text-section, .image-section {
+        width: 100%; /* Full width for each section */
+        height: auto; /* Adjust the height for mobile */
+    }
+
+    .text-section {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
 }
 
-.start-btn {
-    background-color: #d1a8d1;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.button-container {
+    text-align: center; /* Center the button horizontally */
+}
+
+.start-quiz-button {
+    padding: 10px 20px;
+    background: rgba(215, 165, 211, 0.95);
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 1rem;
+    border-radius: 16px; 
+    display: inline-block; /* Make sure the button acts as an inline element */
+    transition: background-color 0.3s ease;
 }
 
 .start-btn:hover {
     background-color: #b387b3;
 }
 
-.image-section {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #ffe4b5 50%, white 50%);
+.icon {
+    text-align: center; /* Horizontally centers the image */
+    margin-top: 20px; /* Optional: Adjusts spacing if needed */
 }
 
-.image-section img {
-    width: 400px;
-    height: auto;
+.icon img {
+    width: 150px; /* Adjust width to resize the image */
+    height: auto; /* Maintain aspect ratio */
 }
 
+.move{
+    color: #5A6174;
+    font-family: "inter-variable", sans-serif;
+    text-align: center;
+    font-size: 36px;
+    font-family: "inter-variable",sans-serif;
+    font-variation-settings: 'wght' 600, 'slnt' 0;
 
+}
+
+.prompt{
+    color: #5A6174;
+    text-align: center;
+    font-size: 24px;
+    font-family: "inter-variable",sans-serif;
+    font-variation-settings: 'wght' 400, 'slnt' 0;
+}
+.example {
+
+  }

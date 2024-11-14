@@ -18,13 +18,14 @@ body {
     color: #5A6174;
 
 }
-.header h1{
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.title {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none; 
+  color: #5A6174;
+  font-family: "inter-variable", sans-serif;
 }
+
 
 .logo {
     display: flex;
