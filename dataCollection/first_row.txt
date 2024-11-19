@@ -57,6 +57,7 @@ museums_pp                             0.000048
 max_avg_high                               98.6
 max_avg_low                                13.4
 mean_diff                                  85.2
-International_airport                         1
+international_airport                         1
 amtrak                                        1
 crime_rate                                59.78
+pop_density                             1365.37
