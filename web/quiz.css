@@ -16,6 +16,8 @@ body {
     border-bottom: 1px solid #eaeaea;
     margin: 0; /* Removes default margin from the <h1> */
     color: #5A6174;
+    position: sticky;
+    top: 0;
 
 }
 .title {

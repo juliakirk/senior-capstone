@@ -24,6 +24,8 @@ h1{
     background-color: #ffffff; /* Header background */
     border-bottom: 1px solid #eaeaea;
     color: #5A6174;
+    position: sticky;
+    top: 0;
 }
 
 .title {

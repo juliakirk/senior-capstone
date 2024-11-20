@@ -16,6 +16,8 @@ body, html {
     background-color: #ffffff; /* Header background */
     border-bottom: 1px solid #eaeaea;
     color: #5A6174;
+    position: sticky;
+    top: 0;
 }
 
 .title {
@@ -51,11 +53,12 @@ body, html {
     background-color: rgb(215, 165, 211, 0.95); 
     width: 50%; /* 50% width */
     padding: 50px;
-    text-align: center;
+    text-align: left;
     display: flex; 
     flex-direction: column; /* Ensures elements are stacked vertically */
     justify-content: center; /* Centers text content vertically */
     flex-grow: 1; /* Ensures it takes up the available height */
+    gap: 10px;
 }
 
 .loginInfo{
@@ -64,8 +67,32 @@ body, html {
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
     background-color: rgb(245, 230, 220, .68);
+    flex-direction: column;
+    gap: 10px; /* Adjusts the spacing between elements */
+    text-align: left;
     flex-grow: 1; /* Ensures it takes up the available height */
 }
+
+.loginInfo input {
+    margin: 5px 0; /* Reduce space between inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.loginInfo p {
+    margin: 5px 0; /* Reduces spacing around text */
+}
+
+.loginInfo a {
+    color: #5A6174;
+    text-decoration: none;
+}
+
+.loginInfo a:hover {
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     height: 100vh; /* Full screen height */
@@ -73,12 +100,29 @@ body, html {
     align-items: stretch; /* Ensures both sections fill the same height */
 }
 
-.main{
+.intro{
     color: #FFF;
-    font-family: "inter-variable", sans-serif;
-    font-size: 40px;
+    font-family: Inter;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
+.movingIcon{
+    width: 23.625rem;
+    height: 23.625rem;
+    flex-shrink: 0;
+    border-radius: 23.625rem;
+    background: #FDD58D;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.account{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
