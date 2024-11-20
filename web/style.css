@@ -4,14 +4,16 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
 }
 h1{
-    font-family: "inter-variable", sans-serif;
-    font-size: 40px;
-    font-family: "inter-variable",sans-serif;
-    font-variation-settings: 'wght' 400, 'slnt' 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 /* Header (navbar) styling */
 .header {
@@ -29,7 +31,7 @@ h1{
     font-weight: 400;
     text-decoration: none; 
     color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .logo {
@@ -63,7 +65,7 @@ h1{
 
 /* Text section styling */
 .text-section {
-    background-color: #ffe4b5; /* Light yellow color */
+    background-color: rgba(215, 165, 211, 0.95); /* Light yellow color */
     width: 55%; /* 50% width */
     padding: 50px;
     text-align: center;
@@ -117,22 +119,26 @@ h1{
 }
 
 .start-quiz-button {
-    padding: 10px 20px;
-    background: rgba(215, 165, 211, 0.95);
+    background: #FDD58D;
     color: #ffffff; 
+    font-size: 1.5rem;
     text-decoration: none; 
-    font-size: 2rem;
-    border-radius: 16px; 
-    display: inline-block; /* Make sure the button acts as an inline element */
-    transition: background-color 0.3s ease;
-    width: 361px;
-    height: 53px;
+    width: 22.5625rem;
+    height: 2.3125rem;
     flex-shrink: 0;
+    border-radius: 1.65625rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem 1rem; /* Adjust padding for spacing inside the button */
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.start-btn:hover {
-    background-color: #b387b3;
+.start-quiz-button:hover {
+    background-color: #ffe4b5; /* Matches the .start-btn:hover */
+    transition: background-color 0.3s ease;
 }
+
 
 .icon {
     text-align: center; /* Horizontally centers the image */
@@ -145,20 +151,22 @@ h1{
 }
 
 .move{
-    color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+    color: #FFF;
     text-align: center;
-    font-size: 36px;
-    font-family: "inter-variable",sans-serif;
-    font-variation-settings: 'wght' 600, 'slnt' 0;
-
+    font-family: Inter;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-top: 10;
+    margin: 0;
 }
 
 .prompt{
-    color: #5A6174;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
+    color: #ffffff;
+    font-family: "inter-variable", sans-serif;
+    font-size: 1.5rem;
     font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
