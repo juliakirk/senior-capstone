@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WhereNext?</title>
-        <link href= "quiz.css" rel="stylesheet">
+        <link href= "web/quiz.css" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/mif5doq.css">
     </head>
     <body>
@@ -26,9 +26,11 @@
         </section>
         <form action="/submit-survey" method="POST" class="survey-container">
             <div class="question">
-                <p>How much would you like to spend on living costs per month (rent, transportation, groceries?</p>
+                <p>How much would you like to spend on living costs per month (rent, transportation, groceries?)</p>
                 <div class="slidecontainer">
-                    <input type="range" min="1000" max="3000" value="2000" class="slider" id="COL">
+                    >1K <br> per month
+                    <input type="range" min="1000" max="3000" value="2000" class="slider" id="COL" required>
+                    $3k+ <br> per month
                 </div>
             </div>
 
@@ -36,25 +38,25 @@
                 <p>On a scale from 1 to 5, how important are safety concerns, like low crime rates, in your decision when choosing a place to live?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
-                        <input type="radio" name="crime" value="1">
-                        <span></span>
+                        Not <br> Important
+                        <input type="radio" name="crime" value="1" required>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
-                        <input type="radio" name="crime" value="2">
-                        <span></span>
+                        <input type="radio" name="crime" value="2" required>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
-                        <input type="radio" name="crime" value="3">
-                        <span></span>
+                        <input type="radio" name="crime" value="3" required>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
-                        <input type="radio" name="crime" value="4">
-                        <span></span>
+                        <input type="radio" name="crime" value="4"required>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
-                        <input type="radio" name="crime" value="5">
-                        <span></span> Very Important
+                        <input type="radio" name="crime" value="5" required>
+                        <span class="radio-label orange"></span> Very <br> Important
                     </label>
                   </div>
             </div>
@@ -63,25 +65,25 @@
                 <p>On a scale from 1 to 5, how important is access to outdoor spaces and nature in your decision to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br>  Important
                         <input type="radio" name="nature" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nature" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nature" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nature" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nature" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span>Very <br> Important
                     </label>
                   </div>
             </div>
@@ -90,25 +92,25 @@
                 <p>On a scale from 1 to 5, how much do you prefer living in urban areas over rural areas?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        More <br> Rural
                         <input type="radio" name="urban" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="urban" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="urban" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="urban" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="urban" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> More <br>  Urban 
                     </label>
                   </div>
             </div>
@@ -117,25 +119,25 @@
                 <p>On a scale from 1 to 5, how important is it for you to live in a diverse community when deciding where to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="diverse" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="diverse" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="diverse" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="diverse" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="diverse" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span>Very <br>  Important
                     </label>
                 </div>
             </div>
@@ -144,25 +146,25 @@
                 <p>On a scale from 1 to 5, how important is having a variety of dining options, including local and international cuisine, in your decision to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="dining" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="dining" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="dining" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="dining" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="dining" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange "></span>Very <br>  Important
                     </label>
                 </div>
             </div>
@@ -171,25 +173,25 @@
                 <p>On a scale from 1 to 5, how important is access to nightlife options in your decision to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="nightlife" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nightlife" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nightlife" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nightlife" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="nightlife" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> Very<br>  Important
                     </label>
                   </div>
             </div>  
@@ -198,25 +200,25 @@
                 <p>On a scale from 1 to 5, how important is easy access to airports or train stations in your decision to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="airports" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="airports" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="airports" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="airports" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="airports" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> Very <br> Important
                     </label>
                   </div>
             </div> 
@@ -225,25 +227,25 @@
                 <p>On a scale from 1 to 5, how much do you prefer commuting via driving your own car over using public transportation?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="transportation" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="transportation" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="transportation" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="transportation" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="transportation" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> Very <br> Important
                     </label>
                   </div>
             </div> 
@@ -252,25 +254,25 @@
                 <p>On a scale from 1 to 5, how important is access to entertainment such as museums, farmers markets, family-friendly activities, etc in your decision to move?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="activities" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="activities" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="activities" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="activities" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="activities" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> Very<br>  Important
                     </label>
                   </div>
             </div> 
@@ -279,25 +281,25 @@
                 <p>On a scale from 1 to 5, where do you align more politically, with 1 being very liberal and 5 being very conservative (and 3 being independent or moderate)?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="politics" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="politics" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="politics" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="politics" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="politics" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span>Very<br>  Important
                     </label>
                   </div>
             </div> 
@@ -306,25 +308,25 @@
                 <p>On a scale from 1 to 5, how important is it for you to live in areas that align with your political beliefs?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="allignment" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="allignment" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="allignment" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="allignment" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="allignment" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span>Very <br> Important
                     </label>
                   </div>
             </div> 
@@ -333,25 +335,25 @@
                 <p>On a scale from 1 to 5, do you prefer hotter or colder climates? </p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="climate" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="climate" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="climate" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="climate" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="climate" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span>Very <br> Important
                     </label>
                   </div>
             </div> 
@@ -360,31 +362,33 @@
                 <p>On a scale from 1 to 5, how important is it that you live in an area with seasonal changes in weather?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not Important
+                        Not <br> Important
                         <input type="radio" name="seasonal" value="1">
-                        <span></span>
+                        <span class="radio-label green"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="seasonal" value="2">
-                        <span></span>
+                        <span class="radio-label green medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="seasonal" value="3">
-                        <span></span>
+                        <span class="radio-label small"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="seasonal" value="4">
-                        <span></span>
+                        <span class="radio-label orange medium"></span>
                     </label>
                     <label class="option-label">
                         <input type="radio" name="seasonal" value="5">
-                        <span></span> Very Important
+                        <span class="radio-label orange"></span> Very <br> Important
                     </label>
                   </div>
             </div> 
+            
+        </div>
+        <div class="question">
 
-
-            <label for="job-industry">What job industry most aligns with your current or desired career path?</label>
+            <p>What job industry most aligns with your current or desired career path? <br></p>
             <select id="job-industry" name="job-industry">
                 <option value="" disabled selected>Select an industry</option>
                 <option value="natural-resources">Natural resources</option>
@@ -400,13 +404,13 @@
                 <option value="public-administration">Public administration</option>
                 <option value="other">Other</option>
             </select>
-
+        </div>
             <div class="submit-section">
                 <button type="submit">Submit Survey</button>
             </div>
 
-         </form>
-            
+
+         </form>         
     </body>
 </html>
 

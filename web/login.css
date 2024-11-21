@@ -1,10 +1,13 @@
 body, html {
-    height: 100%; /* Ensure the body takes the full screen */
+    height: 100vh; /* Ensure full viewport height */
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #5A6174;
     font-family: "inter-variable", sans-serif;
+}
+body {
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Header (navbar) styling */
@@ -84,20 +87,34 @@ body, html {
     margin: 5px 0; /* Reduces spacing around text */
 }
 
-.loginInfo a {
+.loginButton {
+    background: #F78B45;
+    color: #ffffff; 
+    font-size: 1.5rem;
+    text-decoration: none; 
+    width: 22.5625rem;
+    height: 2.3125rem;
+    flex-shrink: 0;
+    border-radius: 0.5625rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginPage{
     color: #5A6174;
-    text-decoration: none;
 }
 
-.loginInfo a:hover {
-    text-decoration: underline;
+.loginButton a:hover {
+    background-color:  #F78B45; /* Matches the .start-btn:hover */
+    transition: background-color 0.3s ease;
 }
 
 .container {
     display: flex;
-    height: 100vh; /* Full screen height */
-    justify-content: center; /* Centers items horizontally */
-    align-items: stretch; /* Ensures both sections fill the same height */
+    height: 100vh;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .intro{
@@ -125,4 +142,40 @@ body, html {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.create{
+    color: #5A6174;
+    text-align: center;
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.loginDesign, .loginInfo {
+    flex-grow: 1; /* Ensure both sections stretch equally */
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow scrolling */
+        overflow-y: auto;
+    }
+
+    .loginDesign, .loginInfo {
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height for stacking */
+    }
+    body {
+        overflow: scroll; /* Prevent scrolling */
+    }
+}
+
+.loginInfo input {
+    width: 100%; /* Makes the inputs take the full width of the container */
+    max-width: 400px; /* Optional: Limits the width for larger screens */
+    padding: 10px; /* Adds padding for a better look */
+    margin-bottom: 10px; /* Space between input fields */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
