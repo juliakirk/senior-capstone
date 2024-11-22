@@ -19,19 +19,21 @@
         <section class="hero">
             <h2>Where should you move?</h2>
             <div class="navigation">
-                <div class="option">Take the survey</div>
-                <div class="option">View Top Matches</div>
-                <div class="option">Explore Options</div>
+                <a href="quiz.html" class="option">Take the survey</a>
+                <a href="quiz.html" class="option">View Top Matches</a>
+                <a href="quiz.html" class="option">Explore Options</a>
             </div>
         </section>
         <form action="/submit-survey" method="POST" class="survey-container">
             <div class="question">
                 <p>How much would you like to spend on living costs per month (rent, transportation, groceries?)</p>
                 <div class="slidecontainer">
-                    >1K <br> per month
+                    <span class="slider-label left">&lt; $1k <br> per month</span>
                     <input type="range" min="1000" max="3000" value="2000" class="slider" id="COL" required>
-                    $3k+ <br> per month
-                </div>
+                    <span class="slider-label right">$3k+ <br> per month</span>
+                  </div>
+                  <div class="slider-value" id="sliderValue">$2000</div>
+                  
             </div>
 
             <div class="question">
@@ -410,7 +412,8 @@
             </div>
 
 
-         </form>         
+         </form>   
+         <script src='quiz.js'></script>      
     </body>
 </html>
 

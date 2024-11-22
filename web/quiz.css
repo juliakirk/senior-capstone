@@ -4,11 +4,10 @@ body, html {
   padding: 0;
   background-color: #ffffff;
   color: #5A6174;;
-  font-family: Inter, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 h1{
   color: #FFF;
-  font-family: Inter;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -16,11 +15,10 @@ h1{
 }
 .survey-container {
   width: 90%;
-  max-width: 80%;
-  padding: 20px;
+  padding: 10px;
   background: #fff;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 /* Header (navbar) styling */
 .header {
@@ -31,7 +29,8 @@ h1{
   background-color: #ffffff; /* Header background */
   border-bottom: 1px solid #eaeaea;
   color: #5A6174;
-   position: sticky;
+  position: sticky;
+  z-index: 1000;
   top: 0;
 }
 
@@ -40,7 +39,6 @@ h1{
   font-weight: 400;
   text-decoration: none; 
   color: #5A6174;
-  font-family: Inter, sans-serif;
 }
 
 .logo {
@@ -93,6 +91,8 @@ h1{
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
 }
 
 .option:nth-child(1) {
@@ -116,73 +116,92 @@ h1{
         gap: 1rem; /* Adjust the space between stacked buttons */
     }
 }
+
 .option:hover {
     color: #ffffff;
 }
 
 
-./* Wrapper for the slider and labels */
-.slider-wrapper {
+
+.slidecontainer {
   display: flex;
-  align-items: center; /* Align text and slider vertically */
-  justify-content: space-between; /* Space text and slider evenly */
-  gap: 10px; /* Optional: Adjust spacing between elements */
-  margin-top: 20px; /* Optional: Add some spacing above the slider */
+  align-items: center; /* Align slider and text vertically */
+  justify-content: space-between; /* Space labels evenly on both sides */
+  gap: 15px; /* Adjust spacing between slider and labels */
+  margin: 20px 0; /* Optional: Add margin around the slider container */
+  position: relative; /* Allows absolute positioning for the slider value */
+  width: 100%;
 }
 
 /* Styling for the slider labels */
 .slider-label {
   font-size: 1rem; /* Adjust text size */
-  text-align: center; /* Center-align multi-line text */
   color: #5A6174; /* Match your design's text color */
-  flex-shrink: 0; /* Prevent labels from shrinking */
-  max-width: 80px; /* Optional: Limit the width for responsiveness */
+  text-align: center; /* Center-align multi-line text */
+  line-height: 1.2; /* Adjust spacing between lines */
 }
 
 .slider-label.left {
-  text-align: left; /* Align text to the left for the left label */
+  text-align: right; /* Right-align the left label */
 }
 
 .slider-label.right {
-  text-align: right; /* Align text to the right for the right label */
+  text-align: left; /* Left-align the right label */
 }
 
-/* Slider container */
-.slidecontainer {
-  flex-grow: 1; /* Make the slider take up remaining space */
-}
-
-/* Slider styling */
+/* Styling the slider */
 .slider {
-  -webkit-appearance: none;
-  width: 100%; /* Make slider fill the container */
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  
+  flex-grow: 1; /* Makes the slider stretch */
+  appearance: none; /* Remove default styling */
+  height: 8px; /* Adjust height of the slider track */
+  border-radius: 5px; /* Rounded edges */
+  background: #d3d3d3; /* Light grey track */
+  outline: none; /* Remove focus outline */
+  cursor: pointer; /* Change cursor on hover */
+  transition: opacity 0.2s ease; /* Smooth hover effect */
 }
 
 .slider:hover {
-  opacity: 1;
+  opacity: 1; /* Full opacity on hover */
 }
 
+/* Slider thumb styling */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
+  appearance: none; /* Remove default styling */
+  width: 20px; /* Adjust size of the thumb */
+  height: 20px; /* Make it circular */
+  border-radius: 50%; /* Circular shape */
+  background: #4A4A5B; /* Thumb color */
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2); /* Enlarge thumb on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4A4A5B;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Styling the dynamic slider value */
+.slider-value {
+  text-align: center; /* Center the value */
+  font-size: 1.2rem; /* Slightly larger font */
+  color: #5A6174; /* Match text color to design */
+  margin-top: 10px; /* Add spacing above the value */
+}
+
 
 /* Dropdown Button */
 .dropbtn {
@@ -236,14 +255,23 @@ h1{
 .question{
   border-bottom: 2px solid black;
   text-align: center;
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  text-align: center; /* Ensure text is centered */
+  margin: 20px auto; /* Center the block in its container */
+  max-width: 80%;
+  padding: 20px; /* Optional: Add some padding for spacing */
+
+  
 }
 .question p{
   color: #5A6174;
   text-align: center;
-  font-family: Inter;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
 }
 
@@ -255,7 +283,7 @@ input[type="radio"] {
 .radio-label {
   width: 82px;
   height: 82px;
-  border: 3px solid #ccc;
+  border: 3px solid #D9D9D9;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -270,9 +298,16 @@ input[type="radio"] {
 }
 
 /* Selected state styles */
-input[type="radio"]:checked + .radio-label {
-  border-color: orange;
+input[type="radio"]:checked + .radio-label {/* Optional: Keep the border color change */
+  background-color: #D9D9D9; /* Full circle when checked */
 }
+input[type="radio"]:checked + .radio-label.green {
+  background-color: #8FD1CD;
+}
+input[type="radio"]:checked + .radio-label.orange {
+  background-color: #F78B45;
+}
+
 .radio-label.medium {
   width: 67px;
   height: 67px;
@@ -284,42 +319,29 @@ input[type="radio"]:checked + .radio-label {
 }
 
 .radio-label.green {
-  border-color: lightblue;
+  border-color: #8FD1CD;
 }
 
 .radio-label.orange {
-  border-color: orange;
+  border-color: #F78B45;
 }
 .quiz {
-  display: flex; /* Arrange radio buttons in a row */
-  align-items: center; 
-  gap: 10px;
-  width: 100%; /* Ensure the group spans the container width */
-  margin-top: 20px; 
+  display: flex; /* Keep flexbox for arranging items */
+  align-items: center; /* Vertically align radio buttons */
+  justify-content: center; /* Center items horizontally */
+  gap: 40px; /* Adjust spacing between items */
+  width: 100%; /* Optional: Ensure it spans the question container */
+  margin: 0 auto; /* Center it if needed */
 }
 
 
 .quiz label {
-  display: flex; /* Allows the label to hold both text and radio button inline */
+  display: flex; 
   align-items: center; /* Aligns the radio button and label text vertically */
-  gap: 5px; /* Adds a small gap between the radio button and the label text */
+  gap: 10px; /* Adds a small gap between the radio button and the label text */
 }
 
-.submit button{
-  background: #FDD58D;
-  color: #ffffff; 
-  font-size: 1.5rem;
-  text-decoration: none; 
-  width: 22.5625rem;
-  height: 1.8125rem;
-  flex-shrink: 0;
-  border-radius: 1.65625rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 0.5rem 1rem; /* Adjust padding for spacing inside the button */
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-}
+
 .submit-section button {
   background: #FDD58D;
   color: #ffffff; 
@@ -336,81 +358,10 @@ input[type="radio"]:checked + .radio-label {
   vertical-align: middle;
 }
 
-.submit-section button:hover {
-  background-color: #45a049; /* Darker green on hover */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-/* General Question Styling */
 .question {
   text-align: center;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 80%;
 }
 
-/* Center the labels and slider */
-.slider-wrapper {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: center; /* Center items horizontally */
-  gap: 10px;
-  margin-top: 20px;
-}
 
-/* Slider container for styling */
-.slidecontainer {
-  flex-grow: 2; /* Make slider take up available space */
-  position: relative;
-}
-
-/* Slider */
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 8px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.9;
-  transition: opacity 0.2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-/* Slider thumb (handle) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #4A4A6D;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #4A4A6D;
-  cursor: pointer;
-}
-
-/* Slider labels */
-.slider-label {
-  font-size: 0.9rem;
-  color: #333;
-  max-width: 80px;
-  text-align: center;
-}
-
-/* Center value display below the slider */
-.slider-value {
-  margin-top: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #4A4A6D;
-}

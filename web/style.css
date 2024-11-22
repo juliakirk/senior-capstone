@@ -5,14 +5,13 @@ body, html {
     padding: 0;
     background-color: #ffffff;
     color: #ffffff;
-    font-family: Inter, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 body{
     overflow: hidden;
 }
 h1{
     color: #FFF;
-    font-family: Inter;
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 400;
@@ -36,7 +35,6 @@ h1{
     font-weight: 400;
     text-decoration: none; 
     color: #5A6174;
-    font-family: Inter, sans-serif;
 }
 
 .logo {
@@ -159,7 +157,6 @@ h1{
 .move{
     color: #FFF;
     text-align: center;
-    font-family: Inter;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 600;
@@ -170,7 +167,6 @@ h1{
 
 .prompt{
     color: #ffffff;
-    font-family: "inter-variable", sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;

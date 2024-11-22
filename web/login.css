@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     background-color: #ffffff;
     color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+    font-family: Verdana, sans-serif;
 }
 body {
     overflow: hidden; /* Prevent scrolling */
@@ -124,6 +124,8 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .movingIcon{
     width: 23.625rem;
@@ -133,6 +135,12 @@ body {
     background: #FDD58D;
     margin-left: auto;
     margin-right: auto;
+}
+.movingIcon img{
+    width: 110%;
+    height: auto;
+    flex-shrink: 0;
+    padding-bottom: 20px;
 }
 
 .account{
