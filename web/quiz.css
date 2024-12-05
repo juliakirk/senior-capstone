@@ -361,7 +361,7 @@ input[type="radio"]:checked + .radio-label.orange {
 }
 
 
-.submit-section button {
+.submit-section a{
   border-radius: 37px;
   background: rgba(215, 165, 211, 0.95);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
