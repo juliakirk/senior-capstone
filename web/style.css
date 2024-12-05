@@ -14,7 +14,7 @@ h1{
     color: #FFF;
     font-size: 2.5rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: lighter;
     line-height: normal;
 }
 /* Header (navbar) styling */
@@ -27,7 +27,7 @@ h1{
     border-bottom: 1px solid #eaeaea;
     color: #5A6174;
      position: sticky;
-  top: 0;
+    top: 0;
 }
 
 .title {
@@ -40,11 +40,11 @@ h1{
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between logo and text */
+    gap: 10px; 
 }
 
 .headerlogo {
-    width: 2.4375rem; /* Adjust size as necessary */
+    width: 2.4375rem;
     height: auto;
 }
 
@@ -58,33 +58,41 @@ h1{
     text-decoration: underline;
 }
 
-/* Container for the text and image sections */
 .container {
     display: flex;
-    height: 100vh; /* Full screen height */
-    justify-content: center; /* Centers items horizontally */
-    align-items: stretch; /* Ensures both sections fill the same height */
+    height: 100vh; 
+    justify-content: center; 
+    align-items: stretch;
 }
 
 
-/* Text section styling */
 .text-section {
-    background-color: rgba(215, 165, 211, 0.95); /* Light yellow color */
-    width: 55%; /* 50% width */
-    padding: 50px;
+    background: rgba(215, 165, 211, 0.95);
+    width: 55%; 
+ 
+}
+.text_content{
+    align-items: center;
     text-align: center;
     display: flex; 
-    flex-direction: column; /* Ensures elements are stacked vertically */
-    justify-content: center; /* Centers text content vertically */
-    flex-grow: 1; /* Ensures it takes up the available height */
+    flex-direction: column; 
+    justify-content: center; 
+    flex-grow: 1; 
+    margin-top: 0;
+}
+.text_content img{
+    width: 20%;
+    text-align: center;
+    display: block;
+    padding-top: 80px;
+
 }
 
-/* Image section styling */
 .image-section {
-    width: 45%; /* Takes up half the screen */
+    width: 45%;
     display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
+    justify-content: center; 
+    align-items: center; 
     background: conic-gradient(
         from 180deg at 50% 50%, 
         rgba(245, 230, 220, 0.22) 70deg, 
@@ -93,35 +101,32 @@ h1{
         rgba(247, 139, 69, 0.34) 310deg,
         rgba(245, 230, 220, 0.22) 360deg
     );
-    flex-grow: 1; /* Ensures it takes up the available height */
+    flex-grow: 1; 
 }
 
-/* Image inside the image section */
 .image-section img {
     width: 400px;
     height: auto;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack text and image vertically */
+        flex-direction: column; 
     }
 
     .text-section, .image-section {
-        width: 100%; /* Full width for each section */
-        height: auto; /* Adjust the height for mobile */
+        width: 100%; 
+        height: auto;
     }
-
     .text-section {
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 20px; 
     }
 }
 
 .button-container {
-    text-align: center; /* Center the button horizontally */
+    text-align: center; 
 }
-
 .start-quiz-button {
     background: #FDD58D;
     color: #ffffff; 
@@ -132,26 +137,15 @@ h1{
     flex-shrink: 0;
     border-radius: 1.65625rem;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 0.5rem 1rem; /* Adjust padding for spacing inside the button */
+    padding: 0.5rem 1rem; 
     display: inline-block;
     text-align: center;
     vertical-align: middle;
 }
 
 .start-quiz-button:hover {
-    background-color: #ffe4b5; /* Matches the .start-btn:hover */
+    background-color: #ffc966; 
     transition: background-color 0.3s ease;
-}
-
-
-.icon {
-    text-align: center; /* Horizontally centers the image */
-    margin-top: 20px; /* Optional: Adjusts spacing if needed */
-}
-
-.icon img {
-    width: 200px; /* Adjust width to resize the image */
-    height: auto; /* Maintain aspect ratio */
 }
 
 .move{
@@ -159,16 +153,16 @@ h1{
     text-align: center;
     font-size: 2.25rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bolder;
     line-height: normal;
-    padding-top: 10;
+    padding-top: 50px;
+    padding-bottom: 20px;
     margin: 0;
 }
-
 .prompt{
     color: #ffffff;
     font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: lighter;
     line-height: normal;
+    padding-bottom: 30px;
 }

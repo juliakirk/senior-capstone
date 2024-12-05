@@ -1,0 +1,182 @@
+body, html {
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #5A6174;
+    font-family: Verdana, sans-serif;
+}
+
+/* Header (navbar) styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space out logo + text and Log In */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Header background */
+    border-bottom: 1px solid #eaeaea;
+    color: #5A6174;
+    position: sticky;
+    top: 0;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none; 
+    color: #5A6174;
+    font-family: Verdana, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+.headerlogo {
+    width: 2.4375rem; /* Adjust size as necessary */
+    height: auto;
+}
+
+.login {
+    color: #5A6174;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+.navigation a{
+    width: 115px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FDD58D;
+    color: #5A6174;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    display: flex; 
+}
+.navigation{
+    background-color: #FFF;
+    height: 75px;
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove padding */
+    padding-left: 30px;
+    height: 100px; /* Fixed height */
+    display: flex; /* Enable Flexbox */
+    justify-content:left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 100px;
+}
+
+.navigation h2{
+    color: #5A6174;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1{
+    color: #5A6174;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 30px;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between; /* Space between the cards */
+    align-items: flex-end; /* Align card bottoms */
+    margin-left: 60px;
+    margin-right: 60px;
+    gap: 40px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content */
+    justify-content: flex-end; /* Ensure content starts from the bottom */
+    color: #FFF;
+    height: auto; /* Ensure flexibility */
+    min-height: 400px; /* Set a minimum height to maintain alignment */
+}
+
+  
+.card ul {
+    list-style-type: circle;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.card ul li {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+
+/* Images */
+.card img {
+    width: 80%;
+    height: 180px;
+    border-radius: 10px;
+    margin: 15px 0; /* Space around the image */
+}
+
+.card h2 {
+    font-size: 4rem; /* Adjust font size if needed */
+    margin: 0; /* Remove default margin */
+    padding: 5px 0; /* Reduce padding to make it tighter */
+}
+
+
+.card h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.card p {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* Colors */
+.purple {
+background: rgba(215, 165, 211, 0.77);
+height: 70%;
+}
+
+.blue {
+background: rgba(143, 209, 205, 0.76);
+height: 80%;
+}
+
+.orange {
+background: rgba(247, 139, 69, 0.77);
+height: 60%;
+}

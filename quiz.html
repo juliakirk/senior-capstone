@@ -20,21 +20,21 @@
             <h2>Where should you move?</h2>
             <div class="navigation">
                 <a href="quiz.html" class="option">Take the survey</a>
-                <a href="quiz.html" class="option">View Top Matches</a>
-                <a href="quiz.html" class="option">Explore Options</a>
+                <a href="matches.html" class="option">View Top Matches</a>
+                <a href="map.html" class="option">Explore Options</a>
             </div>
         </section>
         <form action="/submit-survey" method="POST" class="survey-container">
             <div class="question">
                 <p>How much would you like to spend on living costs per month (rent, transportation, groceries?)</p>
                 <div class="slidecontainer">
-                    <span class="slider-label left">&lt; $1k <br> per month</span>
-                    <input type="range" min="1000" max="3000" value="2000" class="slider" id="COL" required>
-                    <span class="slider-label right">&gt; $3k <br> per month</span>
-                  </div>
-                  <div class="slider-value" id="sliderValue">$2000</div>
-                  
-            </div>
+                  <span class="slider-label left">&lt; $1k <br> per month</span>
+                  <input type="range" min="1000" max="3000" value="2000" class="slider" id="COL" required>
+                  <span class="slider-label right">&gt; $3k <br> per month</span>
+                </div>
+                <div class="slider-value" id="sliderValue">$2000</div>
+              </div>
+              
 
             <div class="question">
                 <p>On a scale from 1 to 5, how important are safety concerns, like low crime rates, in your decision when choosing a place to live?</p>
@@ -283,7 +283,7 @@
                 <p>On a scale from 1 to 5, where do you align more politically, with 1 being very liberal and 5 being very conservative (and 3 being independent or moderate)?</p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not <br> Important
+                        Very <br> Liberal
                         <input type="radio" name="politics" value="1">
                         <span class="radio-label green"></span>
                     </label>
@@ -301,7 +301,7 @@
                     </label>
                     <label class="option-label">
                         <input type="radio" name="politics" value="5">
-                        <span class="radio-label orange"></span>Very<br>  Important
+                        <span class="radio-label orange"></span>Very<br>  Conservative
                     </label>
                   </div>
             </div> 
@@ -334,10 +334,10 @@
             </div> 
 
             <div class="question">
-                <p>On a scale from 1 to 5, do you prefer hotter or colder climates? </p>
+                <p>Do you prefer colder or hotter climates? </p>
                 <div class="quiz">
                     <label class="option-label">
-                        Not <br> Important
+                       Prefer <br> Colder
                         <input type="radio" name="climate" value="1">
                         <span class="radio-label green"></span>
                     </label>
@@ -355,7 +355,7 @@
                     </label>
                     <label class="option-label">
                         <input type="radio" name="climate" value="5">
-                        <span class="radio-label orange"></span>Very <br> Important
+                        <span class="radio-label orange"></span>Prefer <br> Hotter
                     </label>
                   </div>
             </div> 
@@ -412,7 +412,15 @@
 
 
          </form>   
-         <script src='quiz.js'></script>      
+         <script>
+            const slider = document.getElementById("COL");
+            const sliderValue = document.getElementById("sliderValue");
+
+            slider.addEventListener("input", () => {
+            // Format the slider value and update the displayed value
+            sliderValue.textContent = `$${Number(slider.value).toLocaleString()}`;
+            });
+        </script>
     </body>
 </html>
 

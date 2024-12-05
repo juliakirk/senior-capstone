@@ -28,7 +28,7 @@ body {
     font-weight: 400;
     text-decoration: none; 
     color: #5A6174;
-    font-family: "inter-variable", sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 .logo {
@@ -55,13 +55,14 @@ body {
 .loginDesign {
     background-color: rgb(215, 165, 211, 0.95); 
     width: 50%; /* 50% width */
-    padding: 50px;
     text-align: left;
     display: flex; 
     flex-direction: column; /* Ensures elements are stacked vertically */
     justify-content: center; /* Centers text content vertically */
     flex-grow: 1; /* Ensures it takes up the available height */
     gap: 10px;
+    padding: 0;
+    padding-left: 50px;
 }
 
 .loginInfo{
@@ -119,15 +120,15 @@ body {
 
 .intro{
     color: #FFF;
-    font-family: Inter;
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     padding-top: 0;
     padding-bottom: 0;
+    align-items: center;
 }
-.movingIcon{
+.movingIcon {
     width: 23.625rem;
     height: 23.625rem;
     flex-shrink: 0;
@@ -135,17 +136,22 @@ body {
     background: #FDD58D;
     margin-left: auto;
     margin-right: auto;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
-.movingIcon img{
-    width: 110%;
+
+.movingIcon img {
+    width: auto; /* Adjust to fit */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    max-height: 100%; /* Ensure image does not exceed container height */
     height: auto;
-    flex-shrink: 0;
-    padding-bottom: 20px;
+    padding-bottom: 0; /* Remove unnecessary padding */
 }
+
 
 .account{
     color: #FFF;
-    font-family: Inter;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
@@ -154,7 +160,6 @@ body {
 .create{
     color: #5A6174;
     text-align: center;
-    font-family: Inter;
     font-size: 2rem;
     font-style: normal;
     font-weight: 600;
@@ -185,5 +190,10 @@ body {
     max-width: 400px; /* Optional: Limits the width for larger screens */
     padding: 10px; /* Adds padding for a better look */
     margin-bottom: 10px; /* Space between input fields */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
+}
+.login{
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
 }

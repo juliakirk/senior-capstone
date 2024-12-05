@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+body, html {
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #5A6174;
+    font-family: Verdana, sans-serif;
+}
+body {
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Space out logo + text and Log In */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Header background */
+    border-bottom: 1px solid #eaeaea;
+    color: #5A6174;
+    position: sticky;
+    top: 0;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none; 
+    color: #5A6174;
+    font-family: Verdana, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+.headerlogo {
+    width: 2.4375rem; /* Adjust size as necessary */
+    height: auto;
+}
+
+.login {
+    color: #5A6174;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+
+.explore {
+    background-color: rgba(215, 165, 211, 0.95); /* Background color */
+    color: #ffffff; /* Text color */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove padding */
+    padding-left: 30px;
+    height: 100px; /* Fixed height */
+    display: flex; /* Enable Flexbox */
+    justify-content:left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+}
+.explore h1{
+    color: #FFF;
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.map {
+    height: 500px; width: 100%;
+}
+.again{
+    background-color: #FFF;
+    height: 75px;
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove padding */
+    padding-left: 30px;
+    height: 100px; /* Fixed height */
+    display: flex; /* Enable Flexbox */
+    justify-content:left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 100px;
+
+
+}
+.again h2{
+    color: #5A6174;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.again a{
+    width: 115px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FDD58D;
+    color: #5A6174;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    display: flex; 
+}
+
+

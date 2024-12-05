@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereNext?</title>
+    <link href= "/web/matches.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="web/img/logo.png" alt="WhereNext logo" class="headerlogo">
+            <a href="/index.html" class="title">WhereNext?</a>
+        </div>
+        <a href="login.html" class="login">Log In</a>
+    </header>
+
+    <div class="navigation">
+      <h1> Your Top Three Matches</h1>
+        <h2>Explore how you matched with other cities</h2>
+        <a href="map.html" class="map" >Continue</a>
+    </div>
+    <div class="cards">
+        <!-- Card 1 -->
+        <div class="card purple">
+          <h2>83%</h2>
+          <img src="https://americanmind.org/wp-content/uploads/2023/03/GettyImages-1429150390.jpg" alt="New York City">
+          <h3>New York City, NY</h3>
+          <p>You’ll love...</p>
+          <ul id="nyc-points"></ul>
+        </div>
+        <!-- Card 2 -->
+        <div class="card blue">
+          <h2>91%</h2>
+          <img src="https://www.travelandleisure.com/thmb/wwUPgdpCUuD5sAPFLQf4YasjH0M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicago-illinois-CHITG0221-e448062fc5164da0bba639f9857987f6.jpg" alt="Chicago">
+          <h3>Chicago, IL</h3>
+          <p>You’ll love...</p>
+
+          <ul id="chicago-points"></ul>
+        </div>
+        <!-- Card 3 -->
+        <div class="card orange">
+          <h2>77%</h2>
+          <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ9APa7gGjtNeXNBpcPQb9tz2HLceLzHYaTYISKAnenTN4qwMbZD2bDtI6XRlfYn8v5M02ZPGghMRH-G2A7v2nJsfHdUvzRrmeaj4_Esg" alt="Seattle">
+          <h3>Seattle, WA</h3>
+          <p>You’ll love...</p>
+          <ul id="seattle-points"></ul>
+        </div>
+      </div>
+
+      <script>
+        // Data for each city
+        const data = {
+          nyc: ["Diverse dining options", "Great nightlife", "Access to public transportation"],
+          chicago: ["Big city living", "Access to public parks", "Seasonal weather", "Lower cost of living than other big cities"],
+          seattle: ["Beautiful nature", "Great restaurants", "Political alignment"],
+        };
+      
+        // Function to populate a list
+        function populateList(id, items) {
+          const ul = document.getElementById(id);
+          items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          });
+        }
+      
+        // Populate the lists
+        populateList("nyc-points", data.nyc);
+        populateList("chicago-points", data.chicago);
+        populateList("seattle-points", data.seattle);
+      </script>
+</body>
+</html>
