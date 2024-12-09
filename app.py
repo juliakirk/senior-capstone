@@ -75,21 +75,21 @@ def home():
 @app.route('/recommend', methods=['POST'])
 def recommend():
     user_preferences = {
-        'COL': int(request.form['COL']),
-        'crime': int(request.form(['crime'], 3)),
-        'nature': int(request.form(['nature'],3)),
-        'urban': int(request.form.get('urban', 3)),  # Default if not filled
-        'diverse': int(request.form(['diverse'],3)),
-        'dining': int(request.form(['dining'], 3)),
-        'nightlife': int(request.form(['nightlife'], 3)),
-        'airports': int(request.form(['airports'], 3)),
-        'transportation': int(request.form(['transportation'], 3)),
-        'activities': int(request.form(['activities'], 3)),
-        'politics': int(request.form(['politics'], 3)),
-        'alignment': int(request.form(['alignment'], 3)),
-        'climate': int(request.form(['climate'], 3)),
-        'seasonal': int(request.form(['seasonal'], 3)),
-        'job-industry': request.form['job-industry']
+        'COL': int(request.form.get('COL', 2000)),  # Default to 2000 if no value is provided
+        'crime': int(request.form.get('crime', 3)),
+        'nature': int(request.form.get('nature', 3)),
+        'urban': int(request.form.get('urban', 3)),
+        'diverse': int(request.form.get('diverse', 3)),
+        'dining': int(request.form.get('dining', 3)),
+        'nightlife': int(request.form.get('nightlife', 3)),
+        'airports': int(request.form.get('airports', 3)),
+        'transportation': int(request.form.get('transportation', 3)),
+        'activities': int(request.form.get('activities', 3)),
+        'politics': int(request.form.get('politics', 3)),
+        'alignment': int(request.form.get('alignment', 3)),
+        'climate': int(request.form.get('climate', 3)),
+        'seasonal': int(request.form.get('seasonal', 3)),
+        'job-industry': request.form.get('job-industry', '')
     }
 
     # Call your cityReccomender function
