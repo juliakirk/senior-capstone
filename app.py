@@ -72,7 +72,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('survey.html')  # Your HTML file should be named survey.html
+    return render_template('index.html')  # Your HTML file should be named survey.html
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
