@@ -1,0 +1,22 @@
+{
+    "name": "wherenext",
+    "version": "1.0.0",
+    "description": "Senior capstone project",
+    "main": "script.js",
+    "scripts": {
+      "start": "live-server", 
+      "build": "echo 'Building the frontend...'", 
+      "deploy": "gh-pages -d dist"
+    },
+    "keywords": ["city", "recommender", "frontend", "survey"],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "gh-pages": "^5.0.0"
+    },
+    "devDependencies": {
+      "live-server": "^1.2.2"
+    },
+    "homepage": "https://juliakirk.github.io/senior-capstone/index.html"
+  }
+  
