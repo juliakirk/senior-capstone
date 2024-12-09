@@ -68,7 +68,8 @@ def cityReccomender(user_preferences):
     # Output recommendations
     return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'bullets']]
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
+
 
 @app.route('/')
 def home():
