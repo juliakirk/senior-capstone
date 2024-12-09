@@ -4,7 +4,7 @@
     "description": "Senior capstone project",
     "main": "script.js",
     "scripts": {
-        "start": "live-server", 
+    "start": "live-server", 
       "build": "echo 'Building the frontend...'", 
       "deploy": "gh-pages -d dist"
     },
