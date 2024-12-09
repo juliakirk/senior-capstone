@@ -4,12 +4,12 @@
     "description": "Senior capstone project",
     "main": "script.js",
     "scripts": {
-      "start": "live-server", 
+      "start": "yarn start", 
       "build": "echo 'Building the frontend...'", 
       "deploy": "gh-pages -d dist"
     },
     "keywords": ["city", "recommender", "frontend", "survey"],
-    "author": "Your Name",
+    "author": "Julia Kirk",
     "license": "MIT",
     "dependencies": {
       "gh-pages": "^5.0.0"
