@@ -3,6 +3,10 @@
 from flask import Flask, request, render_template
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+import ast
+
+# Ensure the bullets column is parsed correctly
+
 
 def cityReccomender(user_preferences):
     import pandas as pd
@@ -21,6 +25,8 @@ def cityReccomender(user_preferences):
         'arts_percent', 'other_percent', 'public-administration_percent'
     ]
     data[columns_to_normalize] = scaler.fit_transform(data[columns_to_normalize])
+    
+    data['bullets'] = data['bullets'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
 
 
 
