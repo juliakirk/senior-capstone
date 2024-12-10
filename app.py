@@ -66,7 +66,7 @@ def cityReccomender(user_preferences):
 
     recommendations = data.sort_values(by='score', ascending=False).head(5)
     # Output recommendations
-    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'bullets']]
+    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', list('bullets')]]
 
 app = Flask(__name__, static_folder="static")
 

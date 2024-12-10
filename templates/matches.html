@@ -24,7 +24,6 @@
     <div class="cards">
       {% for match in matches %}
       <div class="card {% if loop.index == 1 %}purple{% elif loop.index == 2 %}blue{% elif loop.index == 3 %}orange{% endif %}">
-          <h2>{{ match.score }}%</h2>
           <img src="{{ match.image }}" alt="{{ match.City_State }}">
           <h3>{{ match.City_State }}</h3>
           <p>You’ll love...</p>
