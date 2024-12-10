@@ -7,19 +7,17 @@
             content="IE=edge">
         <meta name="viewport" 
             content="width=device-width, initial-scale=1.0">
-        <title>
-            WhereNext?
-        </title>
-        <link href= "web/login.css" rel="stylesheet">
+        <title>WhereNext?</title>
+        <link href= "../static/css/login.css" rel="stylesheet">
 
     </head>
     <body>
         <header class="header">
             <div class="logo">
-                <img src="web/img/logo.svg" alt="WhereNext logo" class="headerlogo">
-                <a href="index.html" class="title">WhereNext?</a>
+                <img src="../static/images/logo.svg" alt="WhereNext logo" class="headerlogo">
+                <a href="{{ url_for('home') }}" class="title">WhereNext?</a>
             </div>
-            <a href="login.html" class="login">Log In</a>
+            <a href="{{ url_for('login') }}" class="login">Log In</a>
         </header>
         <div class="container">
             <div class ='loginDesign'>
@@ -27,15 +25,15 @@
                 <p class="intro">One step closer <br> to getting your results... </p>
                 <p class="account">Create an account to view your results </p>
                 <div class="movingIcon">   
-                    <img src="web/img/movingTruck.svg" alt="">
+                    <img src="../static/images/movingTruck.svg" alt="">
                 </div>
             </div>
             <div class="loginInfo">
                     <p class="create">Create your account. </p>
                     <input type="text" placeholder="Email">
                     <input type="text" placeholder="Password">
-                    <a class="loginButton" href="quiz.html">Create Account</a>
-                    <p class="login">Already have an account? <a class='loginPage' href="login.html">Log In</a> </p>
+                    <a class="loginButton" href="{{ url_for('survey') }}">Create Account</a>
+                    <p class="login">Already have an account? <a class='loginPage' href="{{ url_for('login') }}">Log In</a> </p>
             </div>
         </div>
     </body>
