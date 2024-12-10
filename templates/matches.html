@@ -20,9 +20,10 @@
         <h2>Explore how you matched with other cities</h2>
         <a href="{{ url_for('map') }}" class="map" > Continue</a>
     </div>
+
     <div class="cards">
       {% for match in matches %}
-      <div class="card purple">
+      <div class="card {% if loop.index == 1 %}purple{% elif loop.index == 2 %}blue{% elif loop.index == 3 %}orange{% endif %}">
           <h2>{{ match.score }}%</h2>
           <img src="{{ match.image }}" alt="{{ match.City_State }}">
           <h3>{{ match.City_State }}</h3>
@@ -33,34 +34,8 @@
               {% endfor %}
           </ul>
       </div>
-      <div class="card blue">
-        <h2>{{ match.score }}%</h2>
-        <img src="{{ match.image }}" alt="{{ match.City_State }}">
-        <h3>{{ match.City_State }}</h3>
-        <p>You’ll love...</p>
-        <ul>
-            {% for bullet in match.bullets %}
-            <li>{{ bullet }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="card orange">
-      <h2>{{ match.score }}%</h2>
-      <img src="{{ match.image }}" alt="{{ match.City_State }}">
-      <h3>{{ match.City_State }}</h3>
-      <p>You’ll love...</p>
-      <ul>
-          {% for bullet in match.bullets %}
-          <li>{{ bullet }}</li>
-          {% endfor %}
-      </ul>
-    </div>
       {% endfor %}
-      
-
-
-      </div>
-
+  </div>
 
 </body>
 </html>
