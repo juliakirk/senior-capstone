@@ -8,7 +8,7 @@ def cityReccomender(user_preferences):
     import pandas as pd
     from sklearn.preprocessing import MinMaxScaler
 
-    data = pd.read_csv('dataset.csv')
+    data = pd.read_csv('data.csv')
 
     scaler = MinMaxScaler()
     columns_to_normalize = [ 'crime_rate', 'parks_pp', 'pop_density', 
