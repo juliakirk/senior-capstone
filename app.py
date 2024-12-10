@@ -25,10 +25,10 @@ def cityReccomender(user_preferences):
         'arts_percent', 'other_percent', 'public-administration_percent'
     ]
     data[columns_to_normalize] = scaler.fit_transform(data[columns_to_normalize])
-    
+    data['bullets'] = data['bullets'].apply(lambda x: x.replace('\xa0', ' ') if isinstance(x, str) else x)
+
+# Convert the string representation of lists into actual Python lists
     data['bullets'] = data['bullets'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
-
-
 
     data['score'] = 0
 
@@ -72,7 +72,7 @@ def cityReccomender(user_preferences):
 
     recommendations = data.sort_values(by='score', ascending=False).head(5)
     # Output recommendations
-    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'bullets']]
+    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'points']]
 
 app = Flask(__name__, static_folder="static")
 
@@ -96,60 +96,51 @@ def login():
 @app.route('/map')
 def map():
     return render_template('map.html')
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
+def extract_user_preferences(source):
+    """Extract user preferences from request form or query parameters."""
+    return {
+        'COL': int(source.get('COL', 2000)),
+        'crime': int(source.get('crime', 3)),
+        'nature': int(source.get('nature', 3)),
+        'urban': int(source.get('urban', 3)),
+        'diverse': int(source.get('diverse', 3)),
+        'dining': int(source.get('dining', 3)),
+        'nightlife': int(source.get('nightlife', 3)),
+        'airports': int(source.get('airports', 3)),
+        'transportation': int(source.get('transportation', 3)),
+        'activities': int(source.get('activities', 3)),
+        'politics': int(source.get('politics', 3)),
+        'alignment': int(source.get('alignment', 3)),
+        'climate': int(source.get('climate', 3)),
+        'seasonal': int(source.get('seasonal', 3)),
+        'job-industry': source.get('job-industry', '')
+    }
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
-    user_preferences = {
-        'COL': int(request.form.get('COL', 2000)), 
-        'crime': int(request.form.get('crime', 3)),
-        'nature': int(request.form.get('nature', 3)),
-        'urban': int(request.form.get('urban', 3)),
-        'diverse': int(request.form.get('diverse', 3)),
-        'dining': int(request.form.get('dining', 3)),
-        'nightlife': int(request.form.get('nightlife', 3)),
-        'airports': int(request.form.get('airports', 3)),
-        'transportation': int(request.form.get('transportation', 3)),
-        'activities': int(request.form.get('activities', 3)),
-        'politics': int(request.form.get('politics', 3)),
-        'alignment': int(request.form.get('alignment', 3)),
-        'climate': int(request.form.get('climate', 3)),
-        'seasonal': int(request.form.get('seasonal', 3)),
-        'job-industry': request.form.get('job-industry', '')
-    }
+    # Extract preferences from POST form data
+    user_preferences = extract_user_preferences(request.form)
 
+    # Get recommendations
     recommendations = cityReccomender(user_preferences)
 
+    # Select top 3 matches for the matches page
     top_3_matches = recommendations.head(3).to_dict(orient='records')
 
     return render_template('matches.html', matches=top_3_matches)
 
-@app.route('/map')
+@app.route('/map', methods=['GET'])
 def map_view():
-    user_preferences = {
-        'COL': int(request.form.get('COL', 2000)), 
-        'crime': int(request.form.get('crime', 3)),
-        'nature': int(request.form.get('nature', 3)),
-        'urban': int(request.form.get('urban', 3)),
-        'diverse': int(request.form.get('diverse', 3)),
-        'dining': int(request.form.get('dining', 3)),
-        'nightlife': int(request.form.get('nightlife', 3)),
-        'airports': int(request.form.get('airports', 3)),
-        'transportation': int(request.form.get('transportation', 3)),
-        'activities': int(request.form.get('activities', 3)),
-        'politics': int(request.form.get('politics', 3)),
-        'alignment': int(request.form.get('alignment', 3)),
-        'climate': int(request.form.get('climate', 3)),
-        'seasonal': int(request.form.get('seasonal', 3)),
-        'job-industry': request.form.get('job-industry', '')
-    }
+    # Extract preferences from GET query parameters
+    user_preferences = extract_user_preferences(request.args)
+
+    # Get recommendations
     recommendations = cityReccomender(user_preferences)
 
-    # Select the top 5 for the map
+    # Select top 5 matches for the map page
     top_5_for_map = recommendations.head(5).to_dict(orient='records')
 
     return render_template('map.html', locations=top_5_for_map)
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
