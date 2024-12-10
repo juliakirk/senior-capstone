@@ -21,31 +21,44 @@
         <a href="{{ url_for('map') }}" class="map" > Continue</a>
     </div>
     <div class="cards">
-        <!-- Card 1 -->
-        <div class="card purple">
-          <h2>83%</h2>
-          <img src="https://americanmind.org/wp-content/uploads/2023/03/GettyImages-1429150390.jpg" alt="New York City">
-          <h3>New York City, NY</h3>
+      {% for match in matches %}
+      <div class="card purple">
+          <h2>{{ match.score }}%</h2>
+          <img src="{{ match.image }}" alt="{{ match.City_State }}">
+          <h3>{{ match.City_State }}</h3>
           <p>You’ll love...</p>
-          <ul id="nyc-points"></ul>
-        </div>
-        <!-- Card 2 -->
-        <div class="card blue">
-          <h2>91%</h2>
-          <img src="https://www.travelandleisure.com/thmb/wwUPgdpCUuD5sAPFLQf4YasjH0M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicago-illinois-CHITG0221-e448062fc5164da0bba639f9857987f6.jpg" alt="Chicago">
-          <h3>Chicago, IL</h3>
-          <p>You’ll love...</p>
+          <ul>
+              {% for bullet in match.bullets %}
+              <li>{{ bullet }}</li>
+              {% endfor %}
+          </ul>
+      </div>
+      <div class="card blue">
+        <h2>{{ match.score }}%</h2>
+        <img src="{{ match.image }}" alt="{{ match.City_State }}">
+        <h3>{{ match.City_State }}</h3>
+        <p>You’ll love...</p>
+        <ul>
+            {% for bullet in match.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="card orange">
+      <h2>{{ match.score }}%</h2>
+      <img src="{{ match.image }}" alt="{{ match.City_State }}">
+      <h3>{{ match.City_State }}</h3>
+      <p>You’ll love...</p>
+      <ul>
+          {% for bullet in match.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+      </ul>
+    </div>
+      {% endfor %}
+      
 
-          <ul id="chicago-points"></ul>
-        </div>
-        <!-- Card 3 -->
-        <div class="card orange">
-          <h2>77%</h2>
-          <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ9APa7gGjtNeXNBpcPQb9tz2HLceLzHYaTYISKAnenTN4qwMbZD2bDtI6XRlfYn8v5M02ZPGghMRH-G2A7v2nJsfHdUvzRrmeaj4_Esg" alt="Seattle">
-          <h3>Seattle, WA</h3>
-          <p>You’ll love...</p>
-          <ul id="seattle-points"></ul>
-        </div>
+
       </div>
 
       <script>

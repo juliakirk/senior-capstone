@@ -117,8 +117,9 @@ def recommend():
 
     recommendations = cityReccomender(user_preferences)
 
+    match_data = recommendations.to_dict(orient='records')
 
-    return render_template('matches.html', recommendations=recommendations)
+    return render_template('matches.html', matches=match_data)
 
 
 if __name__ == "__main__":
