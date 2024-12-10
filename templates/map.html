@@ -26,23 +26,7 @@
     </div>
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
-    <script>
-        // Use a unique variable name like mapLocations
-        const mapLocations = {{ locations | tojson }};
-        
-        const map = L.map('map').setView([39.8283, -98.5795], 4); // Center on the US
-    
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-    
-        // Add markers for each location
-        mapLocations.forEach(location => {
-            L.marker([location.Latitude, location.Longitude])
-             .addTo(map)
-             .bindPopup(`<strong>${location.City_State}</strong><br>${location.blurb}`);
-        });
-    </script>
+
     
     
 </body>
