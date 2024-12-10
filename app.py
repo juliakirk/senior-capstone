@@ -73,7 +73,7 @@ app = Flask(__name__, static_folder="static")
 
 @app.route('/')
 def home():
-    return render_template('index.html')  # Your HTML file should be named survey.html
+    return render_template('index.html')  
 
 @app.route('/survey')
 def survey():
@@ -97,7 +97,7 @@ if __name__ == "__main__":
 @app.route('/recommend', methods=['POST'])
 def recommend():
     user_preferences = {
-        'COL': int(request.form.get('COL', 2000)),  # Default to 2000 if no value is provided
+        'COL': int(request.form.get('COL', 2000)), 
         'crime': int(request.form.get('crime', 3)),
         'nature': int(request.form.get('nature', 3)),
         'urban': int(request.form.get('urban', 3)),
@@ -114,10 +114,9 @@ def recommend():
         'job-industry': request.form.get('job-industry', '')
     }
 
-    # Call your cityReccomender function
     recommendations = cityReccomender(user_preferences)
 
-    return recommendations.to_html()  # Display recommendations as an HTML table
+    return recommendations.to_html() 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
