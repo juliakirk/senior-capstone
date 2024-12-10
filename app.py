@@ -75,6 +75,25 @@ app = Flask(__name__, static_folder="static")
 def home():
     return render_template('index.html')  # Your HTML file should be named survey.html
 
+@app.route('/survey')
+def survey():
+    return render_template('survey.html')
+
+@app.route('/matches')
+def matches():
+    return render_template('matches.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/map')
+def map():
+    return render_template('map.html')
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
     user_preferences = {
