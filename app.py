@@ -94,6 +94,7 @@ def map():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
     user_preferences = {
@@ -116,7 +117,9 @@ def recommend():
 
     recommendations = cityReccomender(user_preferences)
 
-    return recommendations.to_html() 
+
+    return render_template('matches.html', recommendations=recommendations)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
