@@ -61,28 +61,6 @@
 
       </div>
 
-      <script>
-        // Data for each city
-        const data = {
-          nyc: ["Diverse dining options", "Great nightlife", "Access to public transportation"],
-          chicago: ["Big city living", "Access to public parks", "Seasonal weather", "Lower cost of living than other big cities"],
-          seattle: ["Beautiful nature", "Great restaurants", "Political alignment"],
-        };
-      
-        // Function to populate a list
-        function populateList(id, items) {
-          const ul = document.getElementById(id);
-          items.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            ul.appendChild(li);
-          });
-        }
-      
-        // Populate the lists
-        populateList("nyc-points", data.nyc);
-        populateList("chicago-points", data.chicago);
-        populateList("seattle-points", data.seattle);
-      </script>
+
 </body>
 </html>
