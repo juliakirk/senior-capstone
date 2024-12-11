@@ -125,7 +125,18 @@ h1 {
     min-width: 250px; /* Minimum size for responsive design */
 
 }
+/* Card Specific Heights */
+.card .blue {
+    height: 75%; /* #2 */
+}
 
+.card .purple {
+    height: 80%; /* #1 */
+}
+
+.card .orange {
+    height: 70%; /* #3 */
+}
 
 
 .card ul {
