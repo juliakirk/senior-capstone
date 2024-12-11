@@ -25,14 +25,6 @@
         <a href="{{ url_for('survey') }}"> Retake Quiz</a>
     </div>
     <div id="map" style="height: 80vh; width: 100%;"></div>
-    <!-- Inject Data from Flask -->
-    <script>
-        // Inject the points data passed from Flask
-        const points = {{ points | tojson | safe }};
-        console.log("Points Data:", points); // Debugging step
-    </script>
-    
-    <!-- Initialize Map and Add Markers -->
     <script>
         // Initialize the map
         const map = L.map('map').setView([39.8283, -98.5795], 4); // Center on the US
