@@ -133,7 +133,7 @@ def recommend():
 @app.route('/map', methods=['GET'])
 def map_view():
     # Extract user preferences or provide defaults
-    user_preferences = extract_user_preferences(request.args)
+    user_preferences = extract_user_preferences(request.form)
 
     # Generate recommendations
     recommendations = cityReccomender(user_preferences)
