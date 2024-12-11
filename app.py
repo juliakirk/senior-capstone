@@ -93,6 +93,9 @@ def matches():
 def login():
     return render_template('login.html')
 
+@app.route('/map')
+def map():
+    return render_template('map.html')
 
 def extract_user_preferences(source):
     """Extract user preferences from request form or query parameters."""
