@@ -23,17 +23,6 @@
 
     {% if matches %}
         <div class="cards">
-            <div class="card blue" >
-                <h2>#2</h2>
-                <img src="{{ matches[1].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[1].City_State | default('Unknown City') }}">
-                <h3>{{ matches[1].City_State }}</h3>
-                <p>You’ll love...</p>
-                <ul>
-                    {% for bullet in matches[1].bullets %}
-                    <li>{{ bullet }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
             <div class="card purple" ">
                 <h2>#1</h2>
                 <img src="{{ matches[0].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[0].City_State | default('Unknown City') }}">
@@ -45,6 +34,18 @@
                     {% endfor %}
                 </ul>
             </div>
+            <div class="card blue" >
+                <h2>#2</h2>
+                <img src="{{ matches[1].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[1].City_State | default('Unknown City') }}">
+                <h3>{{ matches[1].City_State }}</h3>
+                <p>You’ll love...</p>
+                <ul>
+                    {% for bullet in matches[1].bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
             <div class="card orange" >
                 <h2>#3</h2>
                 <img src="{{ matches[2].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[2].City_State | default('Unknown City') }}">
