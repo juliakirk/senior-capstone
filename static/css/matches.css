@@ -1,5 +1,5 @@
 body, html {
-    height: 100vh; /* Ensure full viewport height */
+
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -121,19 +121,20 @@ h1 {
     color: #FFF;
     width: 30%; /* Ensure cards fit on the row */
     min-width: 250px; /* Minimum size for responsive design */
+
 }
 
 /* Card Specific Heights */
 .card.blue {
-    height: 80%; /* #2 */
+    height: 800px; /* #2 */
 }
 
 .card.purple {
-    height: 75%; /* #1 */
+    height: 750px; /* #1 */
 }
 
 .card.orange {
-    height: 70%; /* #3 */
+    height: 700px; /* #3 */
 }
 
 .card ul {
