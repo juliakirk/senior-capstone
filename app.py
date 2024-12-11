@@ -132,12 +132,20 @@ def recommend():
 
 @app.route('/map', methods=['GET'])
 def map_view():
-    locations = [
-        {"City_State": "New York, NY", "Latitude": 40.7128, "Longitude": -74.006, "blurb": "Info about New York"},
-        {"City_State": "Los Angeles, CA", "Latitude": 34.0522, "Longitude": -118.2437, "blurb": "Info about Los Angeles"}
-    ]
+    # Extract preferences or use default values
+    user_preferences = extract_user_preferences(request.args)
 
-    print("Locations:", locations)  # Debugging step
-    return render_template('map.html', locations=locations)
+    # Get recommendations from the city recommender
+    recommendations = cityReccomender(user_preferences)
+
+    # Select the top 5 locations and prepare points as a dictionary
+    points = recommendations.head(5).to_dict(orient='records')
+
+    print("Points sent to JavaScript:", points)  # Debugging step
+
+    # Pass the points to the template
+    return render_template('map.html', points=points)
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

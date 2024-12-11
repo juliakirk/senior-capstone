@@ -29,32 +29,27 @@
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
     <script>
-        // Inject Flask data as a JavaScript variable
-        const points = {{ locations | tojson | safe }};
-        console.log("Locations Data from Flask:", locations); // Debugging step
+        // Inject Flask data into JavaScript
+        const points = {{ points | tojson | safe }};
+        console.log("Injected Points:", points); // Debugging step
     </script>
     
     <script>
         // Initialize the map
-        const map = L.map('map').setView([39.8283, -98.5795], 4);
+        const map = L.map('map').setView([39.8283, -98.5795], 4); // Center over the US
     
         // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
     
-        // Debug: Log the data to verify
-        console.log("Locations Data:", points);
-    
-        // Add markers for each location
-        points.forEach(location => {
-            L.marker([location.Latitude, location.Longitude])
+        // Add markers to the map using the injected points
+        points.forEach(point => {
+            L.marker([point.Latitude, point.Longitude])
                 .addTo(map)
-                .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
+                .bindPopup(`<b>${point.City_State}</b><br>${point.blurb}`);
         });
     </script>
-    
-    
     
 </body>
 </html>
