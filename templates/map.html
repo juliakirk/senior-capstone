@@ -42,7 +42,7 @@
                     if (point.Latitude && point.Longitude) { // Validate coordinates
                         L.marker([point.Latitude, point.Longitude])
                             .addTo(map)
-                            .bindPopup(`<b>${point.City_State}</b><br>${point.Blurb}`);
+                            .bindPopup(`<b>${point.City_State}</b>${point.image}<br>${point.blurb}`);
                     } else {
                         console.warn("Invalid point:", point); // Debug invalid points
                     }
