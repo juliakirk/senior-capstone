@@ -141,7 +141,12 @@ def map_view():
     # Select top 5 matches for the map page
     top_5_for_map = recommendations.head(5).to_dict(orient='records')
 
+    # Debug: Print the data
+    print("Top 5 for Map:", top_5_for_map)
+
+    # Pass recommendations to the template
     return render_template('map.html', locations=top_5_for_map)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
