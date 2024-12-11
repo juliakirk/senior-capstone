@@ -125,15 +125,15 @@ h1 {
 
 /* Card Specific Heights */
 .card.blue {
-    height: 500px; /* #2 */
+    height: 80%; /* #2 */
 }
 
 .card.purple {
-    height: 600px; /* #1 */
+    height: 75%; /* #1 */
 }
 
 .card.orange {
-    height: 500px; /* #3 */
+    height: 70%; /* #3 */
 }
 
 .card ul {
