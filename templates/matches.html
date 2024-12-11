@@ -21,20 +21,45 @@
         <a href="{{ url_for('map') }}" class="map" > Continue</a>
     </div>
 
-    <div class="cards">
-      {% for match in matches %}
-      <div class="card {% if loop.index == 1 %}purple{% elif loop.index == 2 %}blue{% elif loop.index == 3 %}orange{% endif %}">
-            <h2>#{{ loop.index }}</h2>
-          <img src="{{ match.image }}" alt="{{ match.City_State }}">
-          <h3>{{ match.City_State }}</h3>
-          <p>You’ll love...</p>
-          <ul>
-              {% for bullet in match.bullets %}
-              <li>{{ bullet }}</li>
-              {% endfor %}
-          </ul>
-      </div>
-      {% endfor %}
+    {% if matches %}
+        <div class="cards">
+            <div class="card blue" style="height: 400px;">
+                <h2>#2</h2>
+                <img src="{{ matches[1].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[1].City_State | default('Unknown City') }}">
+                <h3>{{ matches[1].City_State }}</h3>
+                <p>You’ll love...</p>
+                <ul>
+                    {% for bullet in matches[1].bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card purple" style="height: 500px;">
+                <h2>#1</h2>
+                <img src="{{ matches[0].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[0].City_State | default('Unknown City') }}">
+                <h3>{{ matches[0].City_State }}</h3>
+                <p>You’ll love...</p>
+                <ul>
+                    {% for bullet in matches[0].bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card orange" style="height: 300px;">
+                <h2>#3</h2>
+                <img src="{{ matches[2].image | default('../static/images/default_image.jpg') }}" alt="{{ matches[2].City_State | default('Unknown City') }}">
+                <h3>{{ matches[2].City_State }}</h3>
+                <p>You’ll love...</p>
+                <ul>
+                    {% for bullet in matches[2].bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <p class="no-matches">No matches found. Try retaking the survey to find your best matches!</p>
+    {% endif %}
   </div>
   
   
