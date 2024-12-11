@@ -132,12 +132,12 @@ def recommend():
 
 @app.route('/map', methods=['GET'])
 def map_view():
-    # Replace dynamic data with hardcoded test data
     locations = [
-        {"City_State": "New York, NY", "Latitude": 40.7128, "Longitude": -74.006, "blurb": "The Big Apple"},
-        {"City_State": "Los Angeles, CA", "Latitude": 34.0522, "Longitude": -118.2437, "blurb": "City of Angels"}
+        {"City_State": "New York, NY", "Latitude": 40.7128, "Longitude": -74.006, "blurb": "Info about New York"},
+        {"City_State": "Los Angeles, CA", "Latitude": 34.0522, "Longitude": -118.2437, "blurb": "Info about Los Angeles"}
     ]
 
+    print("Locations:", locations)  # Debugging step
     return render_template('map.html', locations=locations)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
