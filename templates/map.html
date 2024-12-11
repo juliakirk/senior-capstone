@@ -29,15 +29,27 @@
         // Initialize the map
         const map = L.map('map').setView([39.8283, -98.5795], 4); // Center on the US
 
-        // Add a tile layer to the map
+        // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-        L.control.scale().addTo(map);
 
+        // Fetch and display data from the JSON file
+        fetch('/static/data/cities.json')
+            .then(response => response.json())
+            .then(points => {
+                points.forEach(point => {
+                    if (point.Latitude && point.Longitude) { // Validate coordinates
+                        L.marker([point.Latitude, point.Longitude])
+                            .addTo(map)
+                            .bindPopup(`<b>${point.City_State}</b><br>${point.Blurb}`);
+                    } else {
+                        console.warn("Invalid point:", point); // Debug invalid points
+                    }
+                });
+            })
+            .catch(error => console.error("Error loading cities.json:", error));
     </script>
-</body>
-</html>
-    
+
 </body>
 </html>

@@ -94,8 +94,9 @@ def login():
     return render_template('login.html')
 
 @app.route('/map')
-def map():
+def map_view():
     return render_template('map.html')
+
 
 def extract_user_preferences(source):
     """Extract user preferences from request form or query parameters."""
@@ -129,6 +130,12 @@ def recommend():
     top_3_matches = recommendations.head(3).to_dict(orient='records')
 
     return render_template('matches.html', matches=top_3_matches)
+
+@app.route('/data/cities.json')
+def get_cities_data():
+    # Provide the correct path to your JSON file
+    return app.send_static_file('data/cities.json')
+
 
 @app.route('/map', methods=['GET'])
 def map_view():
