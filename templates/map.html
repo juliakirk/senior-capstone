@@ -25,11 +25,6 @@
         <a href="{{ url_for('survey') }}"> Retake Quiz</a>
     </div>
     <div id="map" style="height: 80vh; width: 100%;"></div>
-
-    <div id="map" style="height: 80vh; width: 100%;"></div>
-
-    <div id="map" style="height: 80vh; width: 100%;"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <!-- Inject Data from Flask -->
     <script>
         // Inject the points data passed from Flask
@@ -46,17 +41,6 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-
-        // Add markers from the points data
-        points.forEach(point => {
-            if (point.Latitude && point.Longitude) { // Validate coordinates
-                L.marker([point.Latitude, point.Longitude])
-                    .addTo(map)
-                    .bindPopup(`<b>${point.City_State}</b><br>${point.blurb}`);
-            } else {
-                console.warn("Invalid point:", point); // Log invalid data
-            }
-        });
     </script>
 </body>
 </html>
