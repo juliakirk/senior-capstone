@@ -72,7 +72,7 @@ def cityReccomender(user_preferences):
 
     recommendations = data.sort_values(by='score', ascending=False).head(5)
     # Output recommendations
-    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'points']]
+    return recommendations[['City_State', 'score', 'Latitude', 'Longitude', 'blurb', 'image', 'bullets']]
 
 app = Flask(__name__, static_folder="static")
 
@@ -113,7 +113,7 @@ def extract_user_preferences(source):
         'alignment': int(source.get('alignment', 3)),
         'climate': int(source.get('climate', 3)),
         'seasonal': int(source.get('seasonal', 3)),
-        'job-industry': source.get('job-industry', '')
+        'job-industry': source.get('job-industry', 'other')
     }
 
 @app.route('/recommend', methods=['POST'])
