@@ -132,11 +132,12 @@ def recommend():
     return render_template('matches.html', matches=top_3_matches)
 
 @app.route('/map', methods=['GET'])
-def map_view():
+def map():
     user_preferences = extract_user_preferences(request.args)
     recommendations = city_recommender(user_preferences)
     points = recommendations.head(5).to_dict(orient='records') if not recommendations.empty else []
     return render_template('map.html', points=points)
+
 
 @app.route('/data/cities.json')
 def get_cities_data():
