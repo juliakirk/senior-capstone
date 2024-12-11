@@ -37,11 +37,19 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-        
-        L.marker([40.7128, -74.0060]) // New York City coordinates
-        .addTo(map)
-        .bindPopup('<b>New York City</b><br>The Big Apple!')
-        .openPopup();
+        const points = [
+        {"City_State": "New York, NY", "Latitude": 40.7128, "Longitude": -74.0060, "blurb": "The Big Apple!"},
+        {"City_State": "Los Angeles, CA", "Latitude": 34.0522, "Longitude": -118.2437, "blurb": "City of Angels"}
+    ];
+
+        console.log("Points Data:", points);
+
+        points.forEach(point => {
+        console.log("Processing Point:", point); // Log each point
+        L.marker([point.Latitude, point.Longitude])
+            .addTo(map)
+            .bindPopup(`<b>${point.City_State}</b><br>${point.blurb}`);
+    });
     </script>
     
 </body>
