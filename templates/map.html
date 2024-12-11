@@ -29,31 +29,30 @@
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
     <script>
+        // Injected data from Flask
+        const points = {{ locations|safe }};
+    </script>
+    
+    <script>
         // Initialize the map
-        const map = L.map('map').setView([39.8283, -98.5795], 4); // Center over the US
+        const map = L.map('map').setView([39.8283, -98.5795], 4);
     
         // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
     
-        // Fetch map data from the API
-        fetch('/api/map-data')
-            .then(response => response.json())
-            .then(locations => {
-                console.log("Locations Data:", locations); // Debug: Check the data
+        // Debug: Log the data to verify
+        console.log("Locations Data:", points);
     
-                // Add markers for the top 5 recommendations
-                locations.forEach(location => {
-                    L.marker([location.Latitude, location.Longitude])
-                        .addTo(map)
-                        .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching map data:", error);
-            });
+        // Add markers for each location
+        points.forEach(location => {
+            L.marker([location.Latitude, location.Longitude])
+                .addTo(map)
+                .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
+        });
     </script>
+    
     
     
 </body>

@@ -130,19 +130,20 @@ def recommend():
 
     return render_template('matches.html', matches=top_3_matches)
 
-@app.route('/api/map-data', methods=['GET'])
-def map_data():
-    # Extract preferences or use defaults
+@app.route('/map', methods=['GET'])
+def map_view():
+    # Extract preferences from GET query parameters
     user_preferences = extract_user_preferences(request.args)
 
     # Get recommendations
     recommendations = cityReccomender(user_preferences)
 
-    # Select top 5 matches for the map
+    # Select top 5 matches for the map page
     top_5_for_map = recommendations.head(5).to_dict(orient='records')
 
-    # Return the data as JSON
-    return jsonify(top_5_for_map)
+    # Pass as a variable to the template
+    return render_template('map.html', locations=top_5_for_map)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
