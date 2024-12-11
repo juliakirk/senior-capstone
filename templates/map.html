@@ -28,23 +28,27 @@
 
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
+    <script id="locations-data" type="application/json">
+        {{ locations | tojson }}
+    </script>
     <script>
-        // Ensure `locations` is declared once and properly assigned
-        const points = {{ locations | tojson | safe }};
+        // Retrieve the JSON data from the script tag
+        const rawData = document.getElementById('locations-data').textContent;
+        const locations = JSON.parse(rawData);
     
         // Initialize the map
-        const map = L.map('map').setView([39.8283, -98.5795], 4); // Center map on the US
+        const map = L.map('map').setView([39.8283, -98.5795], 4);
     
         // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
     
-        // Loop through `locations` to add markers
+        // Add markers for the top 5 recommendations
         locations.forEach(location => {
             L.marker([location.Latitude, location.Longitude])
                 .addTo(map)
-                .bindPopup(`<b>${points.City_State}</b><br>${points.blurb}`);
+                .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
         });
     </script>
     
