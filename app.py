@@ -132,18 +132,22 @@ def recommend():
 
 @app.route('/map', methods=['GET'])
 def map_view():
-    # Extract preferences or use default values
+    # Extract user preferences or provide defaults
     user_preferences = extract_user_preferences(request.args)
 
-    # Get recommendations from the city recommender
+    # Generate recommendations
     recommendations = cityReccomender(user_preferences)
 
-    # Select the top 5 locations and prepare points as a dictionary
-    points = recommendations.head(5).to_dict(orient='records')
+    # Convert recommendations to JSON-serializable format
+    if not recommendations.empty:
+        points = recommendations.head(5).to_dict(orient='records')
+    else:
+        # Provide fallback if no recommendations exist
+        points = [{"City_State": "No Matches Found", "Latitude": 0, "Longitude": 0, "blurb": "No data available"}]
 
-    print("Points sent to JavaScript:", points)  # Debugging step
+    # Debugging step: Print points to check the structure
+    print("Points passed to the template:", points)
 
-    # Pass the points to the template
     return render_template('map.html', points=points)
 
 
