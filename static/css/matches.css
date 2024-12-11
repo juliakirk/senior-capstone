@@ -103,10 +103,10 @@ h1 {
 
 .cards {
     display: flex;
-    flex-direction: column; /* Stack cards vertically */
-    gap: 40px; /* Space between cards */
-    align-items: center; /* Center-align cards */
-    justify-content: flex-start; /* Align content to the top */
+    flex-direction: row; /* Arrange cards horizontally */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-end; /* Align card bottoms */
 }
 
 .card {
@@ -116,23 +116,24 @@ h1 {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align content */
+    flex-direction: column; /* Stack items vertically within the card */
+    align-items: center; /* Center-align content within the card */
     color: #FFF;
-    width: 80%; /* Fixed width for consistency */
+    width: 30%; /* Ensure cards fit on the row */
+    min-width: 250px; /* Minimum size for responsive design */
 }
 
 /* Card Specific Heights */
 .card.blue {
-    height: 400px; /* #2 */
+    height: 500px; /* #2 */
 }
 
 .card.purple {
-    height: 500px; /* #1 */
+    height: 600px; /* #1 */
 }
 
 .card.orange {
-    height: 300px; /* #3 */
+    height: 500px; /* #3 */
 }
 
 .card ul {
@@ -185,4 +186,8 @@ h1 {
 
 .orange {
     background: rgba(247, 139, 69, 0.77);
+}
+
+.navigation {
+    margin-bottom: auto; /* Push navigation to the top */
 }
