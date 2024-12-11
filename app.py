@@ -132,16 +132,11 @@ def recommend():
 
 @app.route('/map', methods=['GET'])
 def map_view():
-    # Extract preferences from GET query parameters
     user_preferences = extract_user_preferences(request.args)
-
-    # Get recommendations
     recommendations = cityReccomender(user_preferences)
-
-    # Select top 5 matches for the map page
     top_5_for_map = recommendations.head(5).to_dict(orient='records')
 
-    # Pass as a variable to the template
+    print("Locations sent to map.html:", top_5_for_map)  # Debugging output
     return render_template('map.html', locations=top_5_for_map)
 
 

@@ -29,8 +29,9 @@
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
     <script>
-        // Injected data from Flask
-        const points = {{ locations|safe }};
+        // Inject Flask data as a JavaScript variable
+        const points = {{ locations | tojson | safe }};
+        console.log("Locations Data from Flask:", locations); // Debugging step
     </script>
     
     <script>
