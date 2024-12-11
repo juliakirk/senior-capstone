@@ -48,7 +48,8 @@ body, html {
 .login:hover {
     text-decoration: underline;
 }
-.navigation a{
+
+.navigation a {
     width: 115px;
     height: 27px;
     flex-shrink: 0;
@@ -65,20 +66,20 @@ body, html {
     align-items: center; /* Center vertically */
     display: flex; 
 }
-.navigation{
+
+.navigation {
     background-color: #FFF;
-    height: 75px;
     margin: 0; /* Remove all margins */
     padding: 0; /* Remove padding */
     padding-left: 30px;
     height: 100px; /* Fixed height */
     display: flex; /* Enable Flexbox */
-    justify-content:left; /* Center horizontally */
+    justify-content: left; /* Align content to the left */
     align-items: center; /* Center vertically */
     gap: 100px;
 }
 
-.navigation h2{
+.navigation h2 {
     color: #5A6174;
     font-size: 24px;
     font-style: normal;
@@ -86,7 +87,7 @@ body, html {
     line-height: normal;
 }
 
-h1{
+h1 {
     color: #5A6174;
     font-style: normal;
     font-weight: 600;
@@ -102,15 +103,13 @@ h1{
 
 .cards {
     display: flex;
-    justify-content: space-between; /* Space between the cards */
-    align-items: flex-end; /* Align card bottoms */
-    margin-left: 60px;
-    margin-right: 60px;
-    gap: 40px;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 40px; /* Space between cards */
+    align-items: center; /* Center-align cards */
+    justify-content: flex-start; /* Align content to the top */
 }
 
 .card {
-    flex: 1;
     background: white;
     border-radius: 15px;
     padding: 10px;
@@ -119,13 +118,23 @@ h1{
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center-align content */
-    justify-content: flex-end; /* Ensure content starts from the bottom */
     color: #FFF;
-    height: auto; /* Ensure flexibility */
-    min-height: 400px; /* Set a minimum height to maintain alignment */
+    width: 80%; /* Fixed width for consistency */
 }
 
-  
+/* Card Specific Heights */
+.card.blue {
+    height: 400px; /* #2 */
+}
+
+.card.purple {
+    height: 500px; /* #1 */
+}
+
+.card.orange {
+    height: 300px; /* #3 */
+}
+
 .card ul {
     list-style-type: circle;
     padding: 0;
@@ -134,11 +143,11 @@ h1{
     margin-top: 10px;
     line-height: 1.6;
 }
+
 .card ul li {
     margin-bottom: 5px;
     padding: 5px;
 }
-
 
 /* Images */
 .card img {
@@ -146,6 +155,7 @@ h1{
     height: 180px;
     border-radius: 10px;
     margin: 15px 0; /* Space around the image */
+    object-fit: cover; /* Ensure images don't stretch */
 }
 
 .card h2 {
@@ -154,29 +164,25 @@ h1{
     padding: 5px 0; /* Reduce padding to make it tighter */
 }
 
-
 .card h3 {
-font-size: 20px;
-margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .card p {
-font-weight: bold;
-margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 /* Colors */
 .purple {
-background: rgba(215, 165, 211, 0.77);
-height: 70%;
+    background: rgba(215, 165, 211, 0.77);
 }
 
 .blue {
-background: rgba(143, 209, 205, 0.76);
-height: 80%;
+    background: rgba(143, 209, 205, 0.76);
 }
 
 .orange {
-background: rgba(247, 139, 69, 0.77);
-height: 60%;
+    background: rgba(247, 139, 69, 0.77);
 }
