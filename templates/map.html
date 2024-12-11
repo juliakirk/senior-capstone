@@ -28,29 +28,33 @@
 
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
-    <script id="locations-data" type="application/json">
-        {{ locations | tojson }}
-    </script>
     <script>
-        // Retrieve the JSON data from the script tag
-        const rawData = document.getElementById('locations-data').textContent;
-        const locations = JSON.parse(rawData);
-    
         // Initialize the map
-        const map = L.map('map').setView([39.8283, -98.5795], 4);
+        const map = L.map('map').setView([39.8283, -98.5795], 4); // Center over the US
     
         // Add a tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
     
-        // Add markers for the top 5 recommendations
-        locations.forEach(location => {
-            L.marker([location.Latitude, location.Longitude])
-                .addTo(map)
-                .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
-        });
+        // Fetch map data from the API
+        fetch('/api/map-data')
+            .then(response => response.json())
+            .then(locations => {
+                console.log("Locations Data:", locations); // Debug: Check the data
+    
+                // Add markers for the top 5 recommendations
+                locations.forEach(location => {
+                    L.marker([location.Latitude, location.Longitude])
+                        .addTo(map)
+                        .bindPopup(`<b>${location.City_State}</b><br>${location.blurb}`);
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching map data:", error);
+            });
     </script>
+    
     
 </body>
 </html>
