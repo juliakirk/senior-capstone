@@ -29,28 +29,37 @@
     <div id="map" style="height: 80vh; width: 100%;"></div>
 
     <div id="map" style="height: 80vh; width: 100%;"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Inject Data from Flask -->
+    <script>
+        // Inject the points data passed from Flask
+        const points = {{ points | tojson | safe }};
+        console.log("Points Data:", points); // Debugging step
+    </script>
+    
+    <!-- Initialize Map and Add Markers -->
     <script>
         // Initialize the map
         const map = L.map('map').setView([39.8283, -98.5795], 4); // Center on the US
-    
-        // Add a tile layer
+
+        // Add a tile layer to the map
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-        const points = [
-        {"City_State": "New York, NY", "Latitude": 40.7128, "Longitude": -74.0060, "blurb": "The Big Apple!"},
-        {"City_State": "Los Angeles, CA", "Latitude": 34.0522, "Longitude": -118.2437, "blurb": "City of Angels"}
-    ];
 
-        console.log("Points Data:", points);
-
+        // Add markers from the points data
         points.forEach(point => {
-        console.log("Processing Point:", point); // Log each point
-        L.marker([point.Latitude, point.Longitude])
-            .addTo(map)
-            .bindPopup(`<b>${point.City_State}</b><br>${point.blurb}`);
-    });
+            if (point.Latitude && point.Longitude) { // Validate coordinates
+                L.marker([point.Latitude, point.Longitude])
+                    .addTo(map)
+                    .bindPopup(`<b>${point.City_State}</b><br>${point.blurb}`);
+            } else {
+                console.warn("Invalid point:", point); // Log invalid data
+            }
+        });
     </script>
+</body>
+</html>
     
 </body>
 </html>
